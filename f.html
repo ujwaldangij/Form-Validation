@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('./img/sea-6328687_1280.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        .form-group {
+            width: 90%;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .form-group i {
+            position: absolute;
+            top: 58px;
+            right: 20px;
+            font-size: 1.5rem;
+        }
+
+        .row {
+            height: 100vh;
+        }
+
+        h1 {
+            background-image: linear-gradient(#7ee8fa, #eec0c6);
+            font-size: 2rem;
+            padding: 10px 10px;
+
+        }
+
+        @media screen and (max-width: 576px) {
+            h1 {
+                font-size: 1.5rem;
+                padding: 10px 10px;
+            }
+        }
+
+        label {
+            text-transform: capitalize;
+            font-size: 1.2rem;
+            font-family: 'Libre Baskerville', serif;
+            padding-top: 10px;
+        }
+
+        #submit {
+            background-image: linear-gradient(to right, #eec0c6, #7ee8fa);
+            margin-top: 20px;
+            padding: 5px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            text-transform: capitalize;
+        }
+
+        form {
+            box-shadow: 4px 4px 5px black;
+            border-radius: 10px;
+            background-color: white;
+
+        }
+
+        .form-group i {
+            visibility: hidden;
+        }
+
+        .form-group.success i.fa-check {
+            color: chartreuse;
+            position: absolute;
+            visibility: visible;
+
+        }
+
+        .form-group.error span {
+            color: darkred;
+            text-transform: capitalize;
+            font-weight: bolder;
+        }
+
+        .form-group.success span {
+            color: green;
+            text-transform: capitalize;
+            font-weight: bolder;
+        }
+
+        .form-group.error input {
+            border-color: #ff6666;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(230, 0, 0, 0.25);
+        }
+
+        .form-group.success input {
+            border-color: rgb(140, 217, 140);
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(64, 191, 64, 0.25);
+        }
+
+        .form-group.error i.fa-times-circle {
+            color: red;
+            position: absolute;
+            visibility: visible;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-md-6 my-auto">
+                <form action="" id="f">
+                    <h1 class="text-center">REGISTRATION FORM</h1>
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" name="" id="name" class="form-control" placeholder="Enter your name**!"
+                            autocomplete="off">
+                        <i class="fas fa-check"></i>
+                        <i class="far fa-times-circle"></i>
+                        <span id=""></span>
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="email">email</label>
+                        <input type="text" name="" id="email" class="form-control" placeholder="Enter your email**!"
+                            autocomplete="off">
+                        <i class="fas fa-check"></i>
+                        <i class="far fa-times-circle"></i>
+                        <span id=""></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">password</label>
+                        <input type="text" name="" id="password" class="form-control"
+                            placeholder="Enter your password**!" autocomplete="off">
+                        <i class="fas fa-check"></i>
+                        <i class="far fa-times-circle"></i>
+                        <span id=""></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpassword">cpassword</label>
+                        <input type="text" name="" id="cpassword" class="form-control"
+                            placeholder="Enter your cpassword**!" autocomplete="off">
+                        <i class="fas fa-check"></i>
+                        <i class="far fa-times-circle"></i>
+                        <span id=""></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">phone</label>
+                        <input type="number" name="" id="phone" class="form-control" placeholder="Enter your phone**!"
+                            autocomplete="off">
+                        <i class="fas fa-check"></i>
+                        <i class="far fa-times-circle"></i>
+                        <span id=""></span>
+                    </div>
+                    <input type="submit" id="submit" value="submit" class="btn btn-block">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="../js/form.js"></script> -->
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#f").submit(function (e) {
+                e.preventDefault();
+                validate();
+            });
+            var n = $("#name");
+            var e = $("#email");
+            var p = $("#password");
+            var cp = $("#cpassword");
+            var ph = $("#phone");
+
+            function validate() {
+                var nameval = $("#name").val();
+                var emailval = $("#email").val();
+                var passwordval = $("#password").val();
+                var cpasswordval = $("#cpassword").val();
+                var phoneval = $("#phone").val();
+                username(nameval);
+                email(emailval);
+                password(passwordval);
+                cpassword(cpasswordval);
+                phone(passwordval);
+            }
+
+            function username(name) {
+                if (name == "") {
+                    setError(n, "name is empty");
+                } else {
+                    setSuccess(n, "perfect user name");
+                }
+            }
+            function email(name) {
+                if (name == "") {
+                    setError(e, "name is empty");
+                } else {
+                    setSuccess(e, "perfect user name");
+                }
+            }
+            function password(name) {
+                if (name == "") {
+                    setError(p, "name is empty");
+                } else {
+                    setSuccess(p, "perfect user name");
+                }
+            }
+            function cpassword(name) {
+                if (name == "") {
+                    setError(cp, "name is empty");
+                } else {
+                    setSuccess(cp, "perfect user name");
+                }
+            }
+            function phone(name) {
+                if (name == "") {
+                    setError(ph, "name is empty");
+                } else {
+                    setSuccess(ph, "perfect user name");
+                }
+            }
+
+            function setError(input, msg) {
+                var main = $(input).parent();
+                main.addClass("form-group error");
+                $("span").text(msg);
+            }
+
+            function setSuccess(input, msg) {
+                var main = $(input).parent();
+                main.addClass("form-group success");
+                $("span").text(msg);
+            }
+        });
+    </script>
+</body>
+
+</html>
